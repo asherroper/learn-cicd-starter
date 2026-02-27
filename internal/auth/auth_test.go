@@ -24,10 +24,9 @@ func TestGetAPIKey(t *testing.T) {
 			wantErr: nil,
 		},
 		"malformed header": {
-			input: input2,
-			want:  "",
-			// wantErr: ErrMalformedAuthHeader,
-			wantErr: errors.New("malformed authorization header"),
+			input:   input2,
+			want:    "",
+			wantErr: ErrMalformedAuthHeader,
 		},
 		"missing auth": {
 			input:   input3,
