@@ -28,7 +28,7 @@ jobs:
       - name: Run scripts/buildprod.sh
         run: scripts/buildprod.sh
 
-      - name: Check for credentials that may have gotten into code base
+      - name: Check for credentials that may have gotten into code base.
         run: 'git diff'
 
       - id: 'auth'
